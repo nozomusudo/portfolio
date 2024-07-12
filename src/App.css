@@ -13,19 +13,21 @@
   color: white;
 }
 
-.profile {
-  text-align: left;
-  max-width: 600px;
-}
-
-.profile ul {
+nav ul {
   list-style-type: none;
   padding: 0;
 }
 
-.profile li {
-  background: #444;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
+nav li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }

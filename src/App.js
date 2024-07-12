@@ -1,22 +1,33 @@
 import React from 'react';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Welcome to My Profile</h1>
-        <p>This is a simple profile page built with React and hosted on GitHub Pages.</p>
-        <div className="profile">
-          <h2>Nozomu's Architectural Works</h2>
-          <ul>
-            <li>Project 1: Description of Project 1</li>
-            <li>Project 2: Description of Project 2</li>
-            <li>Project 3: Description of Project 3</li>
-          </ul>
-        </div>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <h1>Welcome to My Profile</h1>
+          <nav>
+            <ul>
+              <li><a href="#/">Home</a></li>
+              <li><a href="#/projects">Projects</a></li>
+              <li><a href="#/contact">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 
